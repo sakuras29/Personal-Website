@@ -104,6 +104,7 @@
         .about-text {
             flex: 1;
             min-width: 300px;
+            text-align: justify;
         }
 
         .about-text p {
@@ -206,6 +207,35 @@
             gap: 1rem;
         }
 
+        .document-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-left: 40px;
+        }
+
+        .document-list a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .document-list a:hover {
+            text-decoration: underline;
+        }
+
+        .photo-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 20px;
+        }
+
+        .photo-grid img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+
         .contact-item {
             display: flex;
             align-items: center;
@@ -286,6 +316,9 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#education">Education</a></li>
+            <li><a href="#qualification">Qualification</a></li>
+            <li><a href="#documents">Documents</a></li>
+            <li><a href="#photos">Photos</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -300,7 +333,7 @@
                 <div class="about-text">
                     <p>Hello! I'm a <strong>Software Developer</strong> and <strong>Data Analyst</strong> based in Tokyo, Japan, with a passion for innovative technology solutions. I specialize in <u>Software Development and Digital Transformation.</u></p>
                     <p>With a Ph.D. from <strong>National Taiwan University</strong> and experience as a visiting scholar at the <strong>University of Tokyo</strong>, I bring a strong academic foundation combined with practical industry expertise in developing cutting-edge solutions for <u>Robotics Simulation.</u></p>
-                    <p>I'm fluent in <u>Chinese (native), conversational in English and Japanese</u>, and I hold three <strong>National Qualifications</strong> as well as a <strong>Permanent Residence Visa</strong>.</p>
+                    <p>I'm fluent in <u>Chinese (native), conversational in English and Japanese</u>, and I hold three <strong>National Qualifications</strong> as well as a <strong>Permanent Residence Visa</strong>. As an <strong>INTJ</strong>, I bring a strategic, analytical, and systems-driven mindset to every project I work on.</p>
                 </div>
             </div>
         </section>
@@ -310,19 +343,11 @@
 
             <div class="experience-item">
                 <h3>Solution/Software Development</h3>
-                <div class="period">2025 – Present</div>
+                <div class="period">2023 – Present</div>
                 <p><strong>Focus Areas:</strong> Data Center & Energy Infrastructure Solutions, Industrial & Building
                     Automation</p>
                 <p>Leading the development of containerized data center solutions and creating interactive 3D web
                     demonstrations for pre-sales presentations at major exhibitions like CEATEC.</p>
-            </div>
-
-            <div class="experience-item">
-                <h3>Energy Storage System</h3>
-                <div class="period">2024</div>
-                <p><strong>Role:</strong> Field Application Engineering</p>
-                <p>Developed ESS demo sites with CAD design and PLC programming, establishing communication protocols
-                    for battery management and energy systems.</p>
             </div>
 
             <div class="experience-item">
@@ -391,13 +416,24 @@
             </div>
 
             <div class="project-card">
+                <h3>Business Intelligence Dashboard</h3>
+                <p>Implemented automated data visualization dashboards for blood pressure tracking, group expense
+                    splitting, and inventory management using RPA workflows and Power BI.</p>
+                <div class="tech-stack">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Power BI</span>
+                    <span class="tech-badge">UiPath</span>
+                    <span class="tech-badge">Data Analysis</span>
+                </div>
+            </div>
+
+            <div class="project-card">
                 <h3>Robotic Arm Simulator</h3>
                 <p>Developed forward/inverse kinematics and spatial transformations for a 3D robotic arm simulator.
                     Designed parametric GUI for joystick control featuring path planning, obstacle avoidance, and
                     automated position setting with digital twin synchronization.</p>
                 <div class="tech-stack">
                     <span class="tech-badge">Python</span>
-                    <span class="tech-badge">VPython</span>
                     <span class="tech-badge">Robotics</span>
                     <span class="tech-badge">Digital Twin</span>
                 </div>
@@ -411,26 +447,13 @@
                 <div class="tech-stack">
                     <span class="tech-badge">HMI</span>
                     <span class="tech-badge">Servo Motor</span>
-                    <span class="tech-badge">IoT</span>
                     <span class="tech-badge">Remote Control</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <h3>Business Intelligence Dashboard</h3>
-                <p>Implemented automated data visualization dashboards for blood pressure tracking, group expense
-                    splitting, and inventory management using RPA workflows and Power BI.</p>
-                <div class="tech-stack">
-                    <span class="tech-badge">Power BI</span>
-                    <span class="tech-badge">UiPath</span>
-                    <span class="tech-badge">Python</span>
-                    <span class="tech-badge">Data Analysis</span>
                 </div>
             </div>
         </section>
 
         <section id="education">
-            <h2>Education & Qualifications</h2>
+            <h2>Education</h2>
 
             <div class="experience-item">
                 <h3>Doctor of Philosophy (Ph.D.)</h3>
@@ -453,8 +476,11 @@
                 <p><strong>Industrial Technology Research Institute (ITRI)</strong></p>
                 <p>・Mechanical and Mechatronics Systems Research Laboratories (MMSL)</p>
             </div>
+        </section>
 
-            <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Professional Certifications</h3>
+
+        <section id="qualification">
+            <h2>Qualifications</h2>
             <div class="qualifications">
                 <div class="qual-item">
                     <strong>Japan Association for Financial Planners (JAFP)</strong>
@@ -487,6 +513,60 @@
             </div>
         </section>
 
+        <section id="documents">
+            <h2>Documents</h2>
+            <h3>CV & Resume</h3>
+            <div class="document-list">
+                <ul>
+                  <li><a href="./CV.pdf" download>My CV</a></li>
+                  <li><a href="./履歴書.pdf" download>履歴書（日本語）</a></li>
+                  <li><a href="./職務経歴書.pdf" download>職務経歴書（日本語）</a></li>
+                  <li><a href="./博士論文・研究成果報告書.pdf" download>博士論文・研究成果報告書（日本語）</a></li>
+                </ul>
+            </div>
+
+            <h3>Degree & Internship</h3>
+            <div class="document-list">
+            <ul>
+              <li><a href="./Certificate (NTUME).pdf" download>国立台湾大学博士課程：学位授与証明書（機械工学）</a></li>
+              <li><a href="./Certificate (NTUGIPO).pdf" download>国立台湾大学博士課程：学位授与証明書（光電子工学）</a></li>
+              <li><a href="./Certificate (NUSIP).pdf" download>名古屋大学夏期集中プログラム：修了証明書（自動車工学） </a></li>
+              <li><a href="./Certificate (UTokyo).pdf" download>東京大学先端科学技術研究センター：受入証明書（年吉研究室）</a></li>
+            </ul>
+            </div>
+
+            <h3>Exam Certificates</h3>
+            <div class="document-list">
+            <ul>
+              <li><a href="./Certificate (EE).pdf" download>国家資格：第三種電気主任技術者（電験三種）</a></li>
+              <li><a href="./Certificate (FE).pdf" download>国家資格：基本情報技術者試験</a></li>
+              <li><a href="./Certificate (FP).pdf" download>国家資格：３級ファイナンシャル・プランニング技能検定（資産設計提案業務）</a></li>
+              <li><a href="./Certificate (JLPT).pdf" download>言語試験：JLPT N1</a></li>
+              <li><a href="./Certificate (TOEFL).pdf" download>言語試験：TOEFL iBT</a></li>
+              <li><a href="./Certificate (TOEIC).pdf" download>言語試験：TOEIC</a></li>
+            </ul>
+            </div>
+        </section>
+
+        <section id="photos">
+        <h2>Photos</h2>
+            <div class="photo-grid">
+              <a href="./1.jpg" target="_blank">
+                <img src="./1.jpg" alt="Photo 1">
+              </a>
+              <a href="./2.jpg" target="_blank">
+                <img src="./2.jpg" alt="Photo 2">
+              </a>
+              <a href="./3.jpg" target="_blank">
+                <img src="./3.jpg" alt="Photo 3">
+              </a>
+              <a href="./4.jpg" target="_blank">
+                <img src="./4.jpg" alt="Photo 3">
+              </a>
+            </div>
+        </section>
+
+
         <section id="contact">
             <h2>Contact</h2>
             <div class="contact-info">
@@ -495,16 +575,12 @@
                     <a href="mailto:b93502137@gmail.com">b93502137@gmail.com</a>
                 </div>
                 <div class="contact-item">
-                    <span>📱</span>
-                    <span>0X0-X0X9-1X0X</span>
+                    <span>💼</span>
+                    <a href="https://www.linkedin.com/in/yu-fan-chen-690b48171/" target="_blank">LinkedIn Profile</a>
                 </div>
                 <div class="contact-item">
-                    <span>📍</span>
-                    <span>Tokyo, Japan</span>
-                </div>
-                <div class="contact-item">
-                    <span>🧬</span>
-                    <span>INTJ Personality</span>
+                    <span>💻</span>
+                    <a href="https://github.com/sakuras29" target="_blank">GitHub Profile</a>
                 </div>
             </div>
         </section>
