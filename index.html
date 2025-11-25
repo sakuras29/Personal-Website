@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yu-Fan Chen - R&D Engineer & Data Analyst</title>
+    <title>Yu-Fan Chen Profile</title>
     <style>
         * {
             margin: 0;
@@ -180,6 +180,7 @@
             padding: 0.3rem 0.8rem;
             border-radius: 15px;
             font-size: 0.85rem;
+            font-weight: bold;
         }
 
         .experience-item {
@@ -200,6 +201,89 @@
             font-weight: 600;
             margin-bottom: 0.8rem;
         }
+
+        .exp-image {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .exp-thumb {
+            float: right;
+            width: 120px;
+            height: auto;
+            margin-left: 1rem;
+            border-radius: 6px;
+        }
+
+        .title-with-icon {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .exp-icon {
+            width: 28px;
+            height: 28px;
+        }
+
+        .exp-two-col {
+            display: grid;
+            grid-template-columns: 1fr 180px;  /* Left text, right image */
+            gap: 1.2rem;
+            margin-top: 1rem;
+            align-items: start;
+        }
+
+        .exp-image-wrapper img {
+            width: 100%;
+            border-radius: 6px;
+            object-fit: cover;
+        }
+
+        /* Responsive: stack on small screens */
+        @media (max-width: 600px) {
+            .exp-two-col {
+                grid-template-columns: 1fr;
+            }
+        
+            .exp-image-wrapper {
+                max-width: 260px;
+            }
+        }
+
+        .exp-indent {
+            margin-left: 0rem;   /* adjust indent amount here */
+        }
+
+        .project-images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* fixed 3-column grid for 2+ or 3 images */
+            gap: 0.8rem;
+            margin: 1rem 0;
+        }
+
+        .project-images a img {
+            width: 100%;
+            border-radius: 6px;
+            object-fit: cover;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+        }
+
+        /* Hover effect */
+        .project-images a:hover img {
+            transform: scale(1.03);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Special case: only 1 image */
+        .project-images a:only-child img {
+            max-width: 400px;   /* limit width of single image */
+            margin: 0 auto;
+            display: block;
+        }       
 
         .contact-info {
             display: flex;
@@ -306,7 +390,7 @@
 <body>
     <header>
         <h1>Yu-Fan Chen</h1>
-        <p>Software Developer | Solution Engineer | Data Analyst | R&D Engineer</p>
+        <p>Software Engineer | Solution Architect | Data Analyst | R&D Specialist</p>
     </header>
 
     <nav>
@@ -331,7 +415,7 @@
                     <img class="profile-img" src="bill.jpg" alt="profile">
                 </div>
                 <div class="about-text">
-                    <p>Hello! I'm a <strong>Software Developer</strong> and <strong>Data Analyst</strong> based in Tokyo, Japan, with a passion for innovative technology solutions. I specialize in <u>Software Development and Digital Transformation.</u></p>
+                    <p>Hello! I'm a <strong>Software Engineer</strong> and <strong>Data Analyst</strong> based in Tokyo, Japan, with a passion for innovative technology solutions. I specialize in <u>Software Development and Digital Transformation.</u></p>
                     <p>With a Ph.D. from <strong>National Taiwan University</strong> and experience as a visiting scholar at the <strong>University of Tokyo</strong>, I bring a strong academic foundation combined with practical industry expertise in developing cutting-edge solutions for <u>Robotics Simulation.</u></p>
                     <p>I'm fluent in <u>Chinese (native), conversational in English and Japanese</u>, and I hold three <strong>National Qualifications</strong> as well as a <strong>Permanent Residence Visa</strong>. As an <strong>INTJ</strong>, I bring a strategic, analytical, and systems-driven mindset to every project I work on.</p>
                 </div>
@@ -342,27 +426,82 @@
             <h2>Work Experience</h2>
 
             <div class="experience-item">
-                <h3>Solution/Software Development</h3>
-                <div class="period">2023 – Present</div>
-                <p><strong>Focus Areas:</strong> Data Center & Energy Infrastructure Solutions, Industrial & Building
-                    Automation</p>
-                <p>Leading the development of containerized data center solutions and creating interactive 3D web
-                    demonstrations for pre-sales presentations at major exhibitions like CEATEC.</p>
+                <h3>Software Development: Web 3D Demo for Containerized Data Center</h3>
+                <div class="period">2024 – Present                 
+                        <!-- <span class="tech-badge">HTML</span>
+                        <span class="tech-badge">CSS</span> -->
+                        <span class="tech-badge">JavaScript (Three.js)</span>
+                </div>           
+                        <!-- <p><strong>Title:</strong> Web 3D Demo for Containerized Data Center</p> -->
+                <div class="exp-two-col">
+                    <div class="exp-text">
+                        <p class="exp-indent">・Designed an interactive website interface optimized for iPad browsers.</p>
+                        <p class="exp-indent">・Created a 3D model of a containerized data center, including server racks, cooling units, main distribution panel, surveillance cameras, and fire protection systems.</p>
+                        <p class="exp-indent">・Developed a pre-sales tool for automated, customer-specific 2D layout proposals.</p>
+                        <p class="exp-indent">・Set up a sales demonstration for a professional presentation at the CEATEC exhibition.</p>
+                    </div>
+                    <div class="exp-image-wrapper">
+                        <img src="./a.jpg" alt="Project Image">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <h3>Solution Development: Design and Proposal for Containerized Data Center</h3>
+                <div class="period">2023 – 2024
+                        <span class="tech-badge">AutoCAD</span>
+                        <span class="tech-badge">FreeCAD (CAE/CFD)</span>
+                </div>           
+                        <!-- <p><strong>Title:</strong> Design and Proposal for Containerized Data Center</p> -->
+                <div class="exp-two-col">
+                    <div class="exp-text">
+                        <p class="exp-indent">・Led the standardization of containerized data center (CDC) designs, covering critical aspects such as cooling systems, electrical configurations, spatial optimization, and more.</p>
+                        <p class="exp-indent">・Developed comprehensive proposal materials, including 2D layouts, 3D models, computational fluid dynamics (CFD) simulations, power usage effectiveness (PUE) calculations, and capital expense (CapEx) & operational expense (OpEx), to support project design and implementation.</p>
+                    </div>                
+                    <div class="exp-image-wrapper">
+                        <img src="./b.jpg" alt="Project Image">
+                    </div>
+                </div>
             </div>
 
             <div class="experience-item">
-                <h3>Document Automation & Product Development</h3>
-                <div class="period">2023</div>
-                <p>Implemented Robotic Process Automation (RPA) solutions and developed servo valve products with linear
-                    motor technology, conducting comprehensive market research and patent analysis.</p>
+                <h3>Software Development: Robotic Arm Simulator</h3>
+                <div class="period">2021 – 2022
+                        <span class="tech-badge">Python (Vpython)</span>
+                </div>           
+                        <!-- <p><strong>Title:</strong> Robotic Arm Simulator</p> -->
+                <div class="exp-two-col">
+                    <div class="exp-text">
+                        <!-- <p class="exp-indent">・Developed forward/inverse kinematics and spatial transformations for a 3D robotic arm simulator, integrating linear algebra and robotics principles.</p>
+                        <p class="exp-indent">・Designed a parametric GUI for 3D arm manipulation via joystick, featuring path planning, obstacle avoidance, and automated position setting.</p>
+                        <p class="exp-indent">・Synchronized virtual 3D arm motion with servo motors and a 2D top view for real-time path tracking and demonstration.</p> -->
+                        <p class="exp-indent">・Developed forward/inverse kinematics, spatial transformations, and a parametric GUI for 3D robotic arm manipulation using joystick control, incorporating path planning, obstacle avoidance, and automated position setting.</p>
+                        <p class="exp-indent">・Synchronized virtual 3D arm motion with servo motors and a 2D top-down view to enable real-time path tracking and demonstration.</p>
+                    </div>                
+                    <div class="exp-image-wrapper">
+                        <img src="./c.jpg" alt="Project Image">
+                    </div>
+                </div>
             </div>
 
             <div class="experience-item">
-                <h3>Software Development & Industrial Automation</h3>
-                <div class="period">2020 – 2022</div>
-                <p>Created robotic arm simulators with forward/inverse kinematics, developed HMI interfaces for servo
-                    motor control, and implemented digital twin solutions for industrial applications.</p>
+                <h3>Industrial Automation: Single Axis Robot</h3>
+                <div class="period">2020
+                        <span class="tech-badge">HMI</span>
+                        <span class="tech-badge">Servo Motor</span>
+                </div>           
+                        <!-- <p><strong>Title:</strong> Single Axis Robot</p> -->
+                <div class="exp-two-col">
+                    <div class="exp-text">
+                        <p class="exp-indent">・Developed an HMI interface for servo motion control with mobile-accessible remote control via integrated wireless router.</p>
+                        <p class="exp-indent">・Delivered client demonstrations and created training videos to facilitate user understanding and operational training.</p>
+                    </div>                
+                    <div class="exp-image-wrapper">
+                        <img src="./d.jpg" alt="Project Image">
+                    </div>
+                </div>
             </div>
+
         </section>
 
         <section id="skills">
@@ -371,9 +510,9 @@
                 <div class="skill-category">
                     <h3>Programming Language</h3>
                     <ul>
-                        <li>Python (SQLite, OpenCV, Numpy, Pandas, Matplotlib)</li>
-                        <li>JavaScript (Three.js, GSAP)</li>
                         <li>ChatGPT (Vibe Coding)</li>
+                        <li>JavaScript (Three.js, GSAP)</li>
+                        <li>Python (SQLite, OpenCV, Numpy, Pandas, Matplotlib)</li>
                     </ul>
                 </div>
 
@@ -400,54 +539,59 @@
         </section>
 
         <section id="projects">
-            <h2>Featured Projects</h2>
+            <h2>Side Projects</h2>
 
             <div class="project-card">
-                <h3>Web 3D Demo for Containerized Data Center</h3>
-                <p>Designed an interactive website interface optimized for iPad browsers featuring 3D models of
-                    containerized data centers. Created a pre-sales tool for automated customer-specific 2D layout
-                    proposals and professional presentations at CEATEC exhibition.</p>
+                <h3>Business Intelligence Dashboard for Data Visualization</h3>
+                <p>Implemented automated data visualization dashboards for blood pressure tracking, group expense splitting, and inventory management using BI Tools.</p>
+                <div class="project-images">
+                    <a href="https://lookerstudio.google.com/reporting/c3760fc6-86ff-4925-ae81-d6f0999e908a/page/w7VtE" target="_blank">
+                        <img src="sp1.PNG" alt="Dashboard Preview 1">
+                    </a>
+                    <a href="https://lookerstudio.google.com/reporting/a3772638-fd8e-43b7-8772-42227af1e91e/page/eODyE" target="_blank">
+                        <img src="sp2.PNG" alt="Dashboard Preview 2">
+                    </a>
+                    <a href="https://lookerstudio.google.com/reporting/3ed0594a-4c17-40da-a9dc-f9201ba76ff1/page/PMycF" target="_blank">
+                        <img src="sp3.PNG" alt="Dashboard Preview 3">
+                    </a>
+                </div>
                 <div class="tech-stack">
-                    <span class="tech-badge">JavaScript</span>
-                    <span class="tech-badge">Three.js</span>
-                    <span class="tech-badge">3D Modeling</span>
-                    <span class="tech-badge">Web Design</span>
+                    <span class="tech-badge">Google Forms</span>
+                    <span class="tech-badge">Google Sheets</span>
+                    <span class="tech-badge">Google Looker</span>
                 </div>
             </div>
 
             <div class="project-card">
-                <h3>Business Intelligence Dashboard</h3>
-                <p>Implemented automated data visualization dashboards for blood pressure tracking, group expense
-                    splitting, and inventory management using RPA workflows and Power BI.</p>
+                <h3>BIM Data & Modeling Automation</h3>
+                <p>.</p>
+                <div class="project-images">
+                    <a href="https://sakuras29.github.io/fusaiji/" target="_blank">
+                        <img src="sp4.PNG" alt="Dashboard Preview 4">
+                    </a>
+                </div>
                 <div class="tech-stack">
                     <span class="tech-badge">Python</span>
-                    <span class="tech-badge">Power BI</span>
-                    <span class="tech-badge">UiPath</span>
-                    <span class="tech-badge">Data Analysis</span>
+                    <span class="tech-badge">Blender</span>
                 </div>
             </div>
 
             <div class="project-card">
-                <h3>Robotic Arm Simulator</h3>
-                <p>Developed forward/inverse kinematics and spatial transformations for a 3D robotic arm simulator.
-                    Designed parametric GUI for joystick control featuring path planning, obstacle avoidance, and
-                    automated position setting with digital twin synchronization.</p>
+                <h3>IoT Visualization</h3>
+                <p>.</p>
                 <div class="tech-stack">
                     <span class="tech-badge">Python</span>
-                    <span class="tech-badge">Robotics</span>
-                    <span class="tech-badge">Digital Twin</span>
+                    <span class="tech-badge">Grafana (SQL)</span>
                 </div>
             </div>
 
             <div class="project-card">
-                <h3>Single Axis Robot with HMI</h3>
-                <p>Developed HMI interface for servo motion control with mobile-accessible remote control via integrated
-                    wireless router. Created training videos and delivered client demonstrations for operational
-                    training.</p>
+                <h3>Image Recognition</h3>
+                <p>.</p>
                 <div class="tech-stack">
-                    <span class="tech-badge">HMI</span>
-                    <span class="tech-badge">Servo Motor</span>
-                    <span class="tech-badge">Remote Control</span>
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">OpenCV</span>
+                    <span class="tech-badge">Keras/Tensorflow MNIST</span>
                 </div>
             </div>
         </section>
@@ -540,7 +684,7 @@
             <ul>
               <li><a href="./Certificate (EE).pdf" target="_blank">国家資格：第三種電気主任技術者（電験三種）</a></li>
               <li><a href="./Certificate (FE).pdf" target="_blank">国家資格：基本情報技術者試験</a></li>
-              <li><a href="./Certificate (FP).pdf" target="_blank">国家資格：３級ファイナンシャル・プランニング技能検定（資産設計提案業務）</a></li>
+              <li><a href="./Certificate (FP3).pdf" target="_blank">国家資格：３級ファイナンシャル・プランニング技能検定（資産設計提案業務）</a></li>
               <li><a href="./Certificate (JLPT).pdf" target="_blank">言語試験：JLPT N1</a></li>
               <li><a href="./Certificate (TOEFL).pdf" target="_blank">言語試験：TOEFL iBT</a></li>
               <li><a href="./Certificate (TOEIC).pdf" target="_blank">言語試験：TOEIC</a></li>
