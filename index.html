@@ -5,386 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yu-Fan Chen Profile</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        nav {
-            background: #2c3e50;
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #667eea;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        section {
-            margin-bottom: 3rem;
-        }
-
-        section h2 {
-            color: #2c3e50;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 3px solid #667eea;
-        }
-
-        .about-content {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border: 4px solid #000000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: white;
-            font-weight: bold;
-        }
-
-        .about-text {
-            flex: 1;
-            min-width: 300px;
-            text-align: justify;
-        }
-
-        .about-text p {
-            margin-bottom: 1rem;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-
-        .skill-category {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
-        }
-
-        .skill-category h3 {
-            color: #2c3e50;
-            margin-bottom: 0.8rem;
-            font-size: 1.2rem;
-        }
-
-        .skill-category ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .skill-category li {
-            padding: 0.3rem 0;
-            color: #555;
-        }
-
-        .skill-category li:before {
-            content: "▹ ";
-            color: #667eea;
-            font-weight: bold;
-        }
-
-        .project-card {
-            background: white;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .project-card h3 {
-            color: #667eea;
-            margin-bottom: 0.8rem;
-            font-size: 1.4rem;
-        }
-
-        .project-card .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-
-        .tech-badge {
-            background: #667eea;
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.85rem;
-            font-weight: bold;
-        }
-
-        .experience-item {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background: #f8f9fa;
-            border-radius: 8px;
-            border-left: 4px solid #764ba2;
-        }
-
-        .experience-item h3 {
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
-        }
-
-        .experience-item .period {
-            color: #667eea;
-            font-weight: 600;
-            margin-bottom: 0.8rem;
-        }
-
-        .exp-image {
-            width: 100%;
-            height: auto;
-            border-radius: 6px;
-            margin-bottom: 1rem;
-        }
-
-        .exp-thumb {
-            float: right;
-            width: 120px;
-            height: auto;
-            margin-left: 1rem;
-            border-radius: 6px;
-        }
-
-        .title-with-icon {
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-        }
-
-        .exp-icon {
-            width: 28px;
-            height: 28px;
-        }
-
-        .exp-two-col {
-            display: grid;
-            grid-template-columns: 1fr 180px;  /* Left text, right image */
-            gap: 1.2rem;
-            margin-top: 1rem;
-            align-items: start;
-        }
-
-        .exp-image-wrapper img {
-            width: 100%;
-            border-radius: 6px;
-            object-fit: cover;
-        }
-
-        /* Responsive: stack on small screens */
-        @media (max-width: 600px) {
-            .exp-two-col {
-                grid-template-columns: 1fr;
-            }
-        
-            .exp-image-wrapper {
-                max-width: 260px;
-            }
-        }
-
-        .exp-indent {
-            margin-left: 0rem;   /* adjust indent amount here */
-        }
-
-        .project-images {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* fixed 3-column grid for 2+ or 3 images */
-            gap: 0.8rem;
-            margin: 1rem 0;
-        }
-
-        .project-images a img {
-            width: 100%;
-            border-radius: 6px;
-            object-fit: cover;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            cursor: pointer;
-        }
-
-        /* Hover effect */
-        .project-images a:hover img {
-            transform: scale(1.03);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-
-        /* Special case: only 1 image */
-        .project-images a:only-child img {
-            max-width: 400px;   /* limit width of single image */
-            margin: 0 auto;
-            display: block;
-        }       
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .document-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            padding-left: 40px;
-        }
-
-        .document-list a {
-            color: #667eea;
-            text-decoration: none;
-        }
-
-        .document-list a:hover {
-            text-decoration: underline;
-        }
-
-        .photo-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-          gap: 20px;
-        }
-
-        .photo-grid img {
-          width: 100%;
-          height: 200px;
-          object-fit: cover;
-          border-radius: 8px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1rem;
-            background: #f8f9fa;
-            border-radius: 8px;
-        }
-
-        .contact-item a {
-            color: #667eea;
-            text-decoration: none;
-        }
-
-        .contact-item a:hover {
-            text-decoration: underline;
-        }
-
-        .qualifications {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .qual-item {
-            background: white;
-            border: 1px solid #e0e0e0;
-            padding: 1rem;
-            border-radius: 8px;
-        }
-
-        .qual-item strong {
-            color: #667eea;
-            display: block;
-            margin-bottom: 0.3rem;
-        }
-
-        footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            nav ul {
-                gap: 1rem;
-            }
-
-            .about-content {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -463,22 +84,20 @@
             </div>
 
             <div class="experience-item">
+                <a href="c.mp4" target="_blank">
                 <h3>Software Development: Robotic Arm Simulator</h3>
                 <div class="period">2021 – 2022 | Software Engineer</div>           
-                        <!-- <p><strong>Title:</strong> Robotic Arm Simulator</p> -->
                 <div class="exp-two-col">
                     <div class="exp-text">
-                        <!-- <p class="exp-indent">・Developed forward/inverse kinematics and spatial transformations for a 3D robotic arm simulator, integrating linear algebra and robotics principles.</p>
-                        <p class="exp-indent">・Designed a parametric GUI for 3D arm manipulation via joystick, featuring path planning, obstacle avoidance, and automated position setting.</p>
-                        <p class="exp-indent">・Synchronized virtual 3D arm motion with servo motors and a 2D top view for real-time path tracking and demonstration.</p> -->
                         <p class="exp-indent">・Developed forward/inverse kinematics, spatial transformations, and a parametric GUI for 3D robotic arm manipulation using joystick control, incorporating path planning, obstacle avoidance, and automated position setting.</p>
                         <p class="exp-indent">・Synchronized virtual 3D arm motion with servo motors and a 2D top-down view to enable real-time path tracking and demonstration.</p>
                     </div>                
                     <div class="exp-image-wrapper">
-                        <img src="./c.jpg" alt="Project Image">
+                            <img src="./c.jpg" alt="Project Image">
                     </div>
                 </div>
                 <span class="tech-badge">Python (Vpython)</span>
+                </a>
             </div>
 
             <div class="experience-item">
@@ -516,7 +135,7 @@
                     <h3>Data Automation & Visualization</h3>
                     <ul>
                         <li>Google Forms/Sheets/Looker</li>
-                        <li>Microsoft Power BI</li>
+                        <li>Microsoft Power BI, Grafana</li>
                         <li>UiPath (RPA)</li>
                     </ul>
                 </div>
@@ -560,7 +179,7 @@
 
             <div class="project-card">
                 <h3>BIM Data & Modeling Automation</h3>
-                <p>.</p>
+                <p>Developed Python function modules to read building information data and automatically generate 3D building models.</p>
                 <div class="project-images">
                     <a href="https://sakuras29.github.io/fusaiji/" target="_blank">
                         <img src="sp4.png" alt="Dashboard Preview 4">
@@ -574,7 +193,12 @@
 
             <div class="project-card">
                 <h3>IoT Visualization</h3>
-                <p>.</p>
+                <p>Implemented a SwitchBot sensor setup on household appliances to track power usage, feeding the data into a Python pipeline and displaying real-time metrics in Grafana dashboards.</p>
+                <div class="project-images">
+                    <a href="sp5.png" target="_blank">
+                        <img src="sp5.png" alt="Dashboard Preview 5">
+                    </a>
+                </div>
                 <div class="tech-stack">
                     <span class="tech-badge">Python</span>
                     <span class="tech-badge">Grafana (SQL)</span>
@@ -583,7 +207,12 @@
 
             <div class="project-card">
                 <h3>Image Recognition</h3>
-                <p>.</p>
+                <p>Built an image recognition system using Python and OpenCV to capture camera input and read numerical values.</p>
+                <div class="project-images">
+                    <a href="sp6.mp4" target="_blank">
+                        <img src="sp6.png" alt="Dashboard Preview 6">
+                    </a>
+                </div>
                 <div class="tech-stack">
                     <span class="tech-badge">Python</span>
                     <span class="tech-badge">OpenCV</span>
@@ -596,25 +225,31 @@
             <h2>Education</h2>
 
             <div class="experience-item">
+                <a href="博士論文・研究成果報告書.pdf" target="_blank">
                 <h3>Doctor of Philosophy (Ph.D.)</h3>
                 <div class="period">2011 – 2018</div>
                 <p><strong>National Taiwan University (NTU)</strong></p>
                 <p>・Department of Mechanical Engineering (ME)</p>
                 <p>・Graduate Institute of Photonics and Optoelectronics (GIPO)</p>
+                </a>
             </div>
 
             <div class="experience-item">
+                <a href="博士論文・研究成果報告書.pdf" target="_blank">
                 <h3>Visiting Scholar</h3>
                 <div class="period">2016 – 2017</div>
                 <p><strong>University of Tokyo (UTokyo)</strong></p>
                 <p>・Research Center for Advanced Science and Technology (RCAST)</p>
+                </a>
             </div>
 
             <div class="experience-item">
+                <a href="博士論文・研究成果報告書.pdf" target="_blank">
                 <h3>Intern & Project Executor</h3>
                 <div class="period">2013 – 2015</div>
                 <p><strong>Industrial Technology Research Institute (ITRI)</strong></p>
                 <p>・Mechanical and Mechatronics Systems Research Laboratories (MMSL)</p>
+                </a>
             </div>
         </section>
 
@@ -623,28 +258,40 @@
             <h2>Qualifications</h2>
             <div class="qualifications">
                 <div class="qual-item">
+                    <a href="Certificate (FP3).pdf" target="_blank">
                     <strong>Japan Association for Financial Planners (JAFP)</strong>
                     <p>3rd-grade Certified Skilled Professional (Sep 2025)</p>
+                    </a>
                 </div>
                 <div class="qual-item">
+                    <a href="Certificate (FE).pdf" target="_blank">
                     <strong>Information Technology Engineers Examination (ITEE)</strong>
                     <p>Fundamental Information Technology Engineers (Sep 2024)</p>
+                    </a>
                 </div>
                 <div class="qual-item">
+                    <a href="Certificate (EE).pdf" target="_blank">
                     <strong>Examination Center for Electrical Engineer (ECEE)</strong>
                     <p>Third Class Electrical Chief Engineer (Apr 2024)</p>
+                    </a>
                 </div>
                 <div class="qual-item">
-                    <strong>Japanese Language (JLPT)</strong>
-                    <p>N1 Level - Passed (2020)</p>
+                    <a href="Certificate (JLPT).pdf" target="_blank">
+                        <strong>Japanese Language (JLPT)</strong>
+                        <p>N1 Level - Passed (2020)</p>
+                    </a>
                 </div>
                 <div class="qual-item">
-                    <strong>English Language (TOEFL iBT)</strong>
-                    <p>80 Points (2015)</p>
+                    <a href="Certificate (TOEFL).pdf" target="_blank">
+                        <strong>English Language (TOEFL iBT)</strong>
+                        <p>80 Points (2015)</p>
+                    </a>
                 </div>
                 <div class="qual-item">
+                    <a href="Certificate (TOEIC).pdf" target="_blank">
                     <strong>English Language (TOEIC)</strong>
                     <p>750 Points (2010)</p>
+                    </a>
                 </div>
                 <div class="qual-item">
                     <strong>Permanent Residence</strong>
@@ -664,7 +311,7 @@
                   <li><a href="./博士論文・研究成果報告書.pdf" target="_blank">博士論文・研究成果報告書（日本語）</a></li>
                 </ul>
             </div>
-
+            <br>
             <h3>Degree & Internship</h3>
             <div class="document-list">
             <ul>
@@ -675,7 +322,7 @@
             </ul>
             </div>
 
-            <h3>Exam Certificates</h3>
+            <!-- <h3>Exam Certificates</h3>
             <div class="document-list">
             <ul>
               <li><a href="./Certificate (EE).pdf" target="_blank">国家資格：第三種電気主任技術者（電験三種）</a></li>
@@ -685,7 +332,7 @@
               <li><a href="./Certificate (TOEFL).pdf" target="_blank">言語試験：TOEFL iBT</a></li>
               <li><a href="./Certificate (TOEIC).pdf" target="_blank">言語試験：TOEIC</a></li>
             </ul>
-            </div>
+            </div> -->
         </section>
 
         <section id="photos">
@@ -725,6 +372,55 @@
             </div>
         </section>
     </div>
+
+
+<!-- Scroll to Top Button -->
+<button id="scrollTopBtn" title="Go to top">🔝</button>
+
+<style>
+  /* Style for the button */
+  #scrollTopBtn {
+    display: none;               /* Hidden by default */
+    position: fixed;             /* Fixed at bottom-right */
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    width: 25px;
+    height: 25px;
+    border: none;
+    /* border-radius: 50%;
+    background-color: #667eea;
+    color: white; */
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  #scrollTopBtn:hover {
+    /* background-color: #764ba2; */
+    transform: scale(1.1);       /* Slight zoom on hover */
+  }
+</style>
+
+<script>
+  // Get the button
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+  // Show button when scrolling down 100px
+  window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      scrollTopBtn.style.display = "block";
+    } else {
+      scrollTopBtn.style.display = "none";
+    }
+  };
+
+  // Scroll to top smoothly when button clicked
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
 
     <footer>
         <p>&copy; 2025 Yu-Fan Chen. All rights reserved.</p>
